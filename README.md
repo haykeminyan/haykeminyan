@@ -230,3 +230,12 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 **`while True: ship_something_new()`**
 
 </div>
+
+<div align="center">
+
+> **"Talk is cheap. Show me the code."**  
+> *— Linus Torvalds*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" alt="Footer"/>
+
+</div>
