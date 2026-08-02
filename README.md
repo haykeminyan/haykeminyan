@@ -127,7 +127,7 @@ Solo-architected async e-commerce platform, still shipping.
 
 Cultural content aggregator — REST + GraphQL, NLP/scraping ingestion pipelines, 8 custom-built pages, zero JS framework.
 
-`FastAPI` `Strawberry` `Django 5`
+`FastAPI` `Strawberry` `Django 6`
 `PostgreSQL` `Celery` `Sentry`
 
 ![Status](https://img.shields.io/badge/status-live-39FF14?style=flat-square&labelColor=0d1117)
@@ -156,22 +156,21 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=haykeminyan&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=0d1117" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=haykeminyan&layout=compact&theme=radical&hide_border=true&bg_color=0d1117" height="165"/>
-
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=haykeminyan&theme=radical&hide_border=true&background=0D1117" width="80%"/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=haykeminyan&theme=radical&no-frame=true&row=1&column=7&margin-w=8" width="90%"/>
 
 </div>
 
 <br/>
 
-## 📈 Activity Graph
+## 🏆 Highlights
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=haykeminyan&theme=react-dark&hide_border=true&bg_color=0D1117&color=39FF14&line=39FF14&point=ffffff&area=true" width="95%"/>
+![5+ Years](https://img.shields.io/badge/Experience-5%2B_Years-39FF14?style=for-the-badge&labelColor=0d1117)
+![Solo](https://img.shields.io/badge/Solo--Shipped-3_Platforms-39FF14?style=for-the-badge&labelColor=0d1117)
+![Zero to Prod](https://img.shields.io/badge/Zero_to-Production-39FF14?style=for-the-badge&labelColor=0d1117)
+![Backward Compat](https://img.shields.io/badge/API_Compat-100%25-39FF14?style=for-the-badge&labelColor=0d1117)
+![K8s](https://img.shields.io/badge/ML--Serving-Kubernetes-39FF14?style=for-the-badge&labelColor=0d1117)
 
 </div>
 
