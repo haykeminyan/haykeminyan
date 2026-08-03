@@ -115,7 +115,7 @@ Solo-architected async e-commerce platform, still shipping.
 
 `FastAPI` `SQLAlchemy2` `asyncpg`
 `PostgreSQL` `Redis` `Celery`
-`Grafana` `Docker`
+`Grafana` `Docker` `SQLAdmin`
 
 ![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
 
@@ -127,8 +127,7 @@ Solo-architected async e-commerce platform, still shipping.
 
 Cultural content aggregator — REST + GraphQL, NLP/scraping ingestion pipelines, 8 custom-built pages, zero JS framework.
 
-`FastAPI` `Strawberry` `Django 6`
-`PostgreSQL` `Celery` `Sentry`
+`FastAPI` `PostgreSQL` `AioHTTP` `BeautifulSoup4` `requests`
 
 ![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
 [![Code](https://img.shields.io/badge/source-05050a?style=flat-square&logo=github&logoColor=3ddc84)](https://github.com/haykeminyan/culture_aggregator)
@@ -141,7 +140,7 @@ Cultural content aggregator — REST + GraphQL, NLP/scraping ingestion pipelines
 
 NGO directory platform — shared backend with TravelCultureHub, custom editorial admin for non-technical staff.
 
-`Django 5` `PostgreSQL`
+`Django 6` `PostgreSQL`
 `Docker` `Nginx`
 
 ![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
