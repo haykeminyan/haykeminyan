@@ -10,21 +10,21 @@
  font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace !important;
 }
 h1, h2, h3, h4 {
- color: #39ff14 !important;
- text-shadow: 0 0 3px rgba(57,255,20,0.55) !important;
+ color: #3ddc84 !important;
+ text-shadow: 0 0 3px rgba(61,220,132,0.55) !important;
 }
 a, a:link, a:visited {
- color: #00e5ff !important;
+ color: #8ff0b8 !important;
  text-shadow: none !important;
 }
 body, p, span, div, li, td, th {
- color: #8fd9a8 !important;
+ color: #7fcda3 !important;
 }
 strong, b {
- color: #c8ffd9 !important;
+ color: #baf7d5 !important;
 }
 hr {
- border-color: rgba(57,255,20,0.25) !important;
+ border-color: rgba(61,220,132,0.25) !important;
 }
 svg {
  background: transparent !important;
@@ -94,7 +94,7 @@ svg {
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            3146 Commits
+                            3148 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -2524,7 +2524,7 @@ svg {
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 3 Aug 2026, 01:20:31 (timezone Europe/Lisbon) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 3 Aug 2026, 01:31:57 (timezone Europe/Lisbon) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
