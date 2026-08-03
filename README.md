@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05050a,50:05050a,100:05050a&height=230&section=header&text=Ayk%20Eminyan&fontSize=58&fontColor=3ddc84&animation=fadeIn&fontAlignY=38&desc=Python%20Backend%20Engineer%20%C2%B7%20FastAPI%20%2F%20Django&descAlignY=58&descSize=18&descColor=7fcda3" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05050a,50:05050a,100:05050a&height=230&section=header&text=Hayk%20Eminyan&fontSize=58&fontColor=3ddc84&animation=fadeIn&fontAlignY=38&desc=Python%20Backend%20Engineer%20%C2%B7%20FastAPI%20%2F%20Django&descAlignY=58&descSize=18&descColor=7fcda3" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=900&color=3ddc84&center=true&vCenter=true&width=700&lines=%24+whoami;%3E+backend+engineer+%7C+5%2B+years+production+python;%3E+ships+solo%2C+from+empty+repo+to+real+users;%3E+FastAPI+%2F+Django+%2F+async+%2F+Kubernetes;based+in+Porto%2C+Portugal+%F0%9F%87%B5%F0%9F%87%B9" alt="Typing SVG" />
 
