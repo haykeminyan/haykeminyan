@@ -30,8 +30,36 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-
           plugin_stars: yes
           plugin_stars_limit: 4
+
+          extras_css: |
+            html, body {
+              background: #05050a !important;
+            }
+            * {
+              font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace !important;
+            }
+            h1, h2, h3, h4, .title, .header {
+              color: #39ff14 !important;
+              text-shadow: 0 0 4px #39ff14, 0 0 10px rgba(57,255,20,0.6) !important;
+            }
+            a, a:link, a:visited {
+              color: #00fff2 !important;
+              text-shadow: 0 0 4px #00fff2 !important;
+            }
+            body, p, span, div, li, td, th {
+              color: #b6ffcf !important;
+            }
+            hr, .separator {
+              border-color: #39ff14 !important;
+            }
+            .card, .box, .repository, .container, section, article {
+              background: #0a0a12 !important;
+              border: 1px solid #39ff14 !important;
+              box-shadow: 0 0 14px rgba(57,255,20,0.35) !important;
+              border-radius: 6px !important;
+            }
+            svg {
+              background: transparent !important;
+            }
