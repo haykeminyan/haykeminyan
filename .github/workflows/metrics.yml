@@ -41,21 +41,21 @@ jobs:
               font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace !important;
             }
             h1, h2, h3, h4 {
-              color: #39ff14 !important;
-              text-shadow: 0 0 3px rgba(57,255,20,0.55) !important;
+              color: #3ddc84 !important;
+              text-shadow: 0 0 3px rgba(61,220,132,0.55) !important;
             }
             a, a:link, a:visited {
-              color: #00e5ff !important;
+              color: #8ff0b8 !important;
               text-shadow: none !important;
             }
             body, p, span, div, li, td, th {
-              color: #8fd9a8 !important;
+              color: #7fcda3 !important;
             }
             strong, b {
-              color: #c8ffd9 !important;
+              color: #baf7d5 !important;
             }
             hr {
-              border-color: rgba(57,255,20,0.25) !important;
+              border-color: rgba(61,220,132,0.25) !important;
             }
             svg {
               background: transparent !important;

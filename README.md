@@ -1,19 +1,19 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=230&section=header&text=Ayk%20Eminyan&fontSize=58&fontColor=39FF14&animation=fadeIn&fontAlignY=38&desc=Python%20Backend%20Engineer%20%C2%B7%20FastAPI%20%2F%20Django&descAlignY=58&descSize=18&descColor=ffffff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05050a,50:05050a,100:05050a&height=230&section=header&text=Ayk%20Eminyan&fontSize=58&fontColor=3ddc84&animation=fadeIn&fontAlignY=38&desc=Python%20Backend%20Engineer%20%C2%B7%20FastAPI%20%2F%20Django&descAlignY=58&descSize=18&descColor=7fcda3" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=900&color=39FF14&center=true&vCenter=true&width=700&lines=%24+whoami;%3E+backend+engineer+%7C+5%2B+years+production+python;%3E+ships+solo%2C+from+empty+repo+to+real+users;%3E+FastAPI+%2F+Django+%2F+async+%2F+Kubernetes;based+in+Porto%2C+Portugal+%F0%9F%87%B5%F0%9F%87%B9" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=900&color=3ddc84&center=true&vCenter=true&width=700&lines=%24+whoami;%3E+backend+engineer+%7C+5%2B+years+production+python;%3E+ships+solo%2C+from+empty+repo+to+real+users;%3E+FastAPI+%2F+Django+%2F+async+%2F+Kubernetes;based+in+Porto%2C+Portugal+%F0%9F%87%B5%F0%9F%87%B9" alt="Typing SVG" />
 
 <br/>
 
-[![Gmail](https://img.shields.io/badge/-ibhayk%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=39FF14)](mailto:ibhayk@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=39FF14)](https://linkedin.com/in/haykeminyan)
-[![GitHub](https://img.shields.io/badge/-haykeminyan-0d1117?style=for-the-badge&logo=github&logoColor=39FF14)](https://github.com/haykeminyan)
-[![Portugal](https://img.shields.io/badge/-Porto%2C%20Portugal-0d1117?style=for-the-badge&logo=googlemaps&logoColor=39FF14)](#)
+[![Gmail](https://img.shields.io/badge/-ibhayk%40gmail.com-05050a?style=for-the-badge&logo=gmail&logoColor=3ddc84)](mailto:ibhayk@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-05050a?style=for-the-badge&logo=linkedin&logoColor=3ddc84)](https://linkedin.com/in/haykeminyan)
+[![GitHub](https://img.shields.io/badge/-haykeminyan-05050a?style=for-the-badge&logo=github&logoColor=3ddc84)](https://github.com/haykeminyan)
+[![Portugal](https://img.shields.io/badge/-Porto%2C%20Portugal-05050a?style=for-the-badge&logo=googlemaps&logoColor=3ddc84)](#)
 
-![Profile Views](https://komarev.com/ghpvc/?username=haykeminyan&color=39FF14&style=flat-square&label=PROFILE+VIEWS)
-![EU Work Authorised](https://img.shields.io/badge/EU-Work_Authorised-39FF14?style=flat-square&labelColor=0d1117)
-![Powered by Actions](https://img.shields.io/badge/automated_with-GitHub_Actions-39FF14?style=flat-square&labelColor=0d1117&logo=githubactions&logoColor=39FF14)
+![Profile Views](https://komarev.com/ghpvc/?username=haykeminyan&color=3ddc84&style=flat-square&label=PROFILE+VIEWS)
+![EU Work Authorised](https://img.shields.io/badge/EU-Work_Authorised-3ddc84?style=flat-square&labelColor=05050a)
+![Powered by Actions](https://img.shields.io/badge/automated_with-GitHub_Actions-3ddc84?style=flat-square&labelColor=05050a&logo=githubactions&logoColor=3ddc84)
 
 </div>
 
@@ -42,60 +42,60 @@ $ echo $STATUS
 <table>
 <tr><td><b>Languages</b></td><td>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-05050a?style=for-the-badge&logo=python&logoColor=3ddc84)
+![TypeScript](https://img.shields.io/badge/TypeScript-05050a?style=for-the-badge&logo=typescript&logoColor=3ddc84)
+![JavaScript](https://img.shields.io/badge/JavaScript-05050a?style=for-the-badge&logo=javascript&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Frameworks</b></td><td>
 
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-05050a?style=for-the-badge&logo=fastapi&logoColor=3ddc84)
+![Django](https://img.shields.io/badge/Django-05050a?style=for-the-badge&logo=django&logoColor=3ddc84)
+![Flask](https://img.shields.io/badge/Flask-05050a?style=for-the-badge&logo=flask&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Databases</b></td><td>
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-05050a?style=for-the-badge&logo=postgresql&logoColor=3ddc84)
+![MongoDB](https://img.shields.io/badge/MongoDB-05050a?style=for-the-badge&logo=mongodb&logoColor=3ddc84)
+![Redis](https://img.shields.io/badge/Redis-05050a?style=for-the-badge&logo=redis&logoColor=3ddc84)
+![MySQL](https://img.shields.io/badge/MySQL-05050a?style=for-the-badge&logo=mysql&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Async & Tasks</b></td><td>
 
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy_2_(async)-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
-![Celery](https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white)
-![aiohttp](https://img.shields.io/badge/aiohttp-2C5BB4?style=for-the-badge&logo=aiohttp&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy_2_(async)-05050a?style=for-the-badge&logo=sqlalchemy&logoColor=3ddc84)
+![Celery](https://img.shields.io/badge/Celery-05050a?style=for-the-badge&logo=celery&logoColor=3ddc84)
+![aiohttp](https://img.shields.io/badge/aiohttp-05050a?style=for-the-badge&logo=aiohttp&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Cloud & Infra</b></td><td>
 
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-05050a?style=for-the-badge&logo=kubernetes&logoColor=3ddc84)
+![GCP](https://img.shields.io/badge/Google_Cloud-05050a?style=for-the-badge&logo=googlecloud&logoColor=3ddc84)
+![Azure](https://img.shields.io/badge/Azure-05050a?style=for-the-badge&logo=microsoftazure&logoColor=3ddc84)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-05050a?style=for-the-badge&logo=digitalocean&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>DevOps</b></td><td>
 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-05050a?style=for-the-badge&logo=docker&logoColor=3ddc84)
+![Nginx](https://img.shields.io/badge/Nginx-05050a?style=for-the-badge&logo=nginx&logoColor=3ddc84)
+![Vercel](https://img.shields.io/badge/Vercel-05050a?style=for-the-badge&logo=vercel&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Observability</b></td><td>
 
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-05050a?style=for-the-badge&logo=prometheus&logoColor=3ddc84)
+![Grafana](https://img.shields.io/badge/Grafana-05050a?style=for-the-badge&logo=grafana&logoColor=3ddc84)
+![Sentry](https://img.shields.io/badge/Sentry-05050a?style=for-the-badge&logo=sentry&logoColor=3ddc84)
 
 </td></tr>
 <tr><td><b>Frontend</b></td><td>
 
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Jinja](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-05050a?style=for-the-badge&logo=angular&logoColor=3ddc84)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-05050a?style=for-the-badge&logo=tailwindcss&logoColor=3ddc84)
+![Jinja](https://img.shields.io/badge/Jinja2-05050a?style=for-the-badge&logo=jinja&logoColor=3ddc84)
 
 </td></tr>
 </table>
@@ -117,7 +117,7 @@ Solo-architected async e-commerce platform, still shipping.
 `PostgreSQL` `Redis` `Celery`
 `Grafana` `Docker`
 
-![Status](https://img.shields.io/badge/status-live-39FF14?style=flat-square&labelColor=0d1117)
+![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
 
 </td>
 <td width="33%" valign="top">
@@ -130,8 +130,8 @@ Cultural content aggregator — REST + GraphQL, NLP/scraping ingestion pipelines
 `FastAPI` `Strawberry` `Django 6`
 `PostgreSQL` `Celery` `Sentry`
 
-![Status](https://img.shields.io/badge/status-live-39FF14?style=flat-square&labelColor=0d1117)
-[![Code](https://img.shields.io/badge/source-black?style=flat-square&logo=github)](https://github.com/haykeminyan/culture_aggregator)
+![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
+[![Code](https://img.shields.io/badge/source-05050a?style=flat-square&logo=github&logoColor=3ddc84)](https://github.com/haykeminyan/culture_aggregator)
 
 </td>
 <td width="33%" valign="top">
@@ -144,7 +144,7 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 `Django 5` `PostgreSQL`
 `Docker` `Nginx`
 
-![Status](https://img.shields.io/badge/status-live-39FF14?style=flat-square&labelColor=0d1117)
+![Status](https://img.shields.io/badge/status-live-3ddc84?style=flat-square&labelColor=05050a)
 
 </td>
 </tr>
@@ -156,7 +156,7 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=haykeminyan&theme=radical&hide_border=true&background=0D1117" width="80%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=haykeminyan&hide_border=true&background=05050A&border=3ddc84&ring=3ddc84&fire=3ddc84&currStreakLabel=3ddc84&currStreakNum=baf7d5&sideNums=7fcda3&sideLabels=7fcda3&dates=4a7a5e" width="80%"/>
 
 </div>
 
@@ -166,11 +166,11 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 
 <div align="center">
 
-![5+ Years](https://img.shields.io/badge/Experience-5%2B_Years-39FF14?style=for-the-badge&labelColor=0d1117)
-![Solo](https://img.shields.io/badge/Solo--Shipped-3_Platforms-39FF14?style=for-the-badge&labelColor=0d1117)
-![Zero to Prod](https://img.shields.io/badge/Zero_to-Production-39FF14?style=for-the-badge&labelColor=0d1117)
-![Backward Compat](https://img.shields.io/badge/API_Compat-100%25-39FF14?style=for-the-badge&labelColor=0d1117)
-![K8s](https://img.shields.io/badge/ML--Serving-Kubernetes-39FF14?style=for-the-badge&labelColor=0d1117)
+![5+ Years](https://img.shields.io/badge/Experience-5%2B_Years-3ddc84?style=for-the-badge&labelColor=05050a)
+![Solo](https://img.shields.io/badge/Solo--Shipped-3_Platforms-3ddc84?style=for-the-badge&labelColor=05050a)
+![Zero to Prod](https://img.shields.io/badge/Zero_to-Production-3ddc84?style=for-the-badge&labelColor=05050a)
+![Backward Compat](https://img.shields.io/badge/API_Compat-100%25-3ddc84?style=for-the-badge&labelColor=05050a)
+![K8s](https://img.shields.io/badge/ML--Serving-Kubernetes-3ddc84?style=for-the-badge&labelColor=05050a)
 
 </div>
 
@@ -225,7 +225,7 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05050a,50:05050a,100:05050a&height=120&section=footer"/>
 
 **`while True: ship_something_new()`**
 
@@ -236,6 +236,6 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 > **"Talk is cheap. Show me the code."**  
 > *— Linus Torvalds*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" alt="Footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05050a,50:05050a,100:05050a&height=120&section=footer" alt="Footer"/>
 
 </div>
