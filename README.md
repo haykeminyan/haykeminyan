@@ -151,16 +151,6 @@ NGO directory platform — shared backend with TravelCultureHub, custom editoria
 
 <br/>
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=haykeminyan&hide_border=true&background=05050A&border=3ddc84&ring=3ddc84&fire=3ddc84&currStreakLabel=3ddc84&currStreakNum=baf7d5&sideNums=7fcda3&sideLabels=7fcda3&dates=4a7a5e" width="80%"/>
-
-</div>
-
-<br/>
-
 ## 🏆 Highlights
 
 <div align="center">
