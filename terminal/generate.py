@@ -40,7 +40,7 @@ SITES = [
     ("shoplux", "https://shoplux.casa", "async e-commerce platform"),
     ("exhibitions", "https://exhibitions.baregorc.com", "exhibitions aggregator"),
     ("baregorc", "https://baregorc.com", "NGO directory platform"),
-    ("history of Armenia", "https://history.baregorc.com", "historical project about Armenia"),
+    ("history", "https://history.baregorc.com", "history of Armenia, ancient times to today"),
 ]
 HISTORY_DAYS = 30
 UA = "Mozilla/5.0 (compatible; hayk-terminal-profile/1.0; +https://github.com/haykeminyan)"
@@ -64,7 +64,7 @@ RED = "#ff5f56"
 MAGENTA = "#c792ea"
 BLUE = "#6c9ef8"
 
-WINDOWS = ["boot", "neofetch", "systemctl", "htop", "chrono", "pulse"]
+WINDOWS = ["boot", "neofetch", "shoplux", "systemctl", "htop", "chrono", "pulse"]
 
 
 # --------------------------------------------------------------------------- #
@@ -515,6 +515,7 @@ def panel_boot(ctx) -> str:
     lines.append(ok_tag() + [("Mounted ", ""), (f"/home/hayk/repos", "l"), (f" ({g['repo_count']} repos, {human_kb(g['disk_kb'])}B)", "")])
     lines.append(ok_tag() + [("Started ", ""), ("postgresql@16.service", "l"), (" - PostgreSQL RDBMS", "")])
     lines.append(ok_tag() + [("Started ", ""), ("redis-server.service", "l"), (" + ", "d"), ("celery-worker@shoplux.service", "l")])
+    lines.append(ok_tag() + [("Started ", ""), ("rabbitmq-server.service", "l"), (" + ", "d"), ("pydantic-ai@llm-validators.service", "l")])
     up = 0
     for name, url, _ in SITES:
         p = ctx["probes"][name]
@@ -661,6 +662,96 @@ def panel_neofetch(ctx) -> str:
     return doc(h, "".join(body) + tmux_bar(h, 1, now), title="neofetch")
 
 
+def panel_shoplux(ctx) -> str:
+    """Architecture of shoplux.casa as an animated terminal diagram."""
+    now = ctx["now"]
+    h = 520
+    body = []
+    tl, end = typed(PAD, 30, PROMPT, "shoplux --explain architecture --live", begin=0.2, cps=0.035, cursor=False)
+    body.append(tl)
+    t0 = end + 0.2
+    step = [t0]
+
+    def nxt(dt_=0.07):
+        step[0] += dt_
+        return step[0]
+
+    def box(x, y, w, hh, title, subs=(), col=GREEN, fill=BG2, tcls="l b"):
+        d = nxt()
+        out = [f'<rect x="{x}" y="{y}" width="{w}" height="{hh}" rx="4" fill="{fill}" stroke="{col}" stroke-opacity=".75"/>',
+               text(x + 10, y + 18, [(title, tcls)], "sm")]
+        for i, sub in enumerate(subs):
+            out.append(text(x + 10, y + 34 + i * 14, sub if isinstance(sub, list) else [(sub, "")], "xs"))
+        body.append(f'<g class="a" style="animation-delay:{d:.2f}s">{"".join(out)}</g>')
+
+    def wire(pts, col=GREEN, dash=False, packet=True, dur=2.2, delay=0.0, label=None, lpos=None):
+        d = "M" + " L".join(f"{x},{y}" for x, y in pts)
+        da = ' stroke-dasharray="4 4"' if dash else ""
+        (ex, ey), (px, py) = pts[-1], pts[-2]
+        ang = math.degrees(math.atan2(ey - py, ex - px))
+        head = f'<path d="M0,0 L-7,-4 L-7,4 Z" fill="{col}" transform="translate({ex},{ey}) rotate({ang:.0f})"/>'
+        g = f'<path d="{d}" fill="none" stroke="{col}" stroke-opacity=".55" stroke-width="1.3"{da}/>{head}'
+        if label:
+            g += text(lpos[0], lpos[1], [(label, "d")], "xs")
+        start = t0 + 1.6 + delay
+        if packet:
+            g += (f'<circle r="3" fill="{col}" filter="url(#bigglow)" opacity="0"><set attributeName="opacity" to="1" begin="{start:.2f}s"/>'
+                  f'<animateMotion dur="{dur}s" begin="{start:.2f}s" repeatCount="indefinite" path="{d}"/></circle>')
+        body.append(f'<g class="a" style="animation-delay:{t0 + 1.2:.2f}s">{g}</g>')
+
+    # edge
+    box(22, 50, 150, 44, "browser", ["jinja2 · gettext i18n"], CYAN)
+    box(206, 50, 150, 44, "cloudflare", ["tls · cdn · waf"], CYAN)
+    box(390, 50, 140, 44, "nginx", ["reverse proxy"], CYAN)
+    box(600, 50, 258, 44, "stripe", ["checkout · refunds · signed webhooks"], MAGENTA, tcls="m b")
+
+    # app container
+    body.append(f'<g class="a" style="animation-delay:{nxt():.2f}s"><rect x="22" y="118" width="540" height="252" rx="6" fill="none" '
+                f'stroke="{GREEN}" stroke-dasharray="2 3" stroke-opacity=".6"/>'
+                f'{text(32, 134, [("fastapi app ", "g b"), ("(async · docker compose)", "d")], "xs")}</g>')
+    layers = [
+        ("routers", "jwt cookies · google sso · pagination (6+ filters)"),
+        ("facades", "one entry point per use case · reused as llm tools"),
+        ("services + permissions", "business rules · strategy pattern for feeds"),
+        ("repositories", "generic repo · async sqlalchemy 2 · no N+1"),
+    ]
+    for i, (t, sub) in enumerate(layers):
+        y = 146 + i * 54
+        box(36, y, 318, 40, t, [sub])
+        if i:
+            wire([(195, y - 14), (195, y)], packet=False)
+    box(372, 146, 176, 94, "ai assistant", [[("pydantic-ai agent", "c")], "tools -> facades", "structured output", "usage limits · credits"], AMBER, tcls="y b")
+    box(372, 254, 176, 88, "auth", ["fastapi-users", "jwt cookies + google sso", "email verify · reset", "onboarding profile"], CYAN, tcls="c b")
+
+    # data / async side
+    box(600, 118, 258, 50, "postgresql · asyncpg", [[("atomic stock reservation · tx", "")]], GREEN)
+    box(600, 180, 258, 50, "redis", ["cache-aside + warm-up · chat memory"], RED, tcls="r b")
+    box(600, 242, 258, 50, "rabbitmq", ["-> llm validator agents (moderation)"], AMBER, tcls="y b")
+    box(600, 304, 258, 66, "celery", ["webhook reconciliation (missed events)", "newsletter digests"], BLUE, tcls="bl b")
+
+    # bottom row
+    box(22, 392, 250, 58, "llm backends", [[("ollama", "c"), (" (local dev)  ", "d")], [("gemini", "y"), (" (production)", "d")]], AMBER, tcls="y b")
+    box(290, 392, 272, 58, "observability", ["logfire (llm traces)", "prometheus · grafana · loki"], GREEN)
+    box(600, 392, 258, 58, "tests", ["pytest + real postgres", "concurrent checkout races"], MAGENTA, tcls="m b")
+
+    # wires (request path + async paths)
+    wire([(172, 72), (206, 72)], CYAN, dur=1.0)
+    wire([(356, 72), (390, 72)], CYAN, dur=1.0, delay=0.3)
+    wire([(460, 94), (460, 110), (195, 110), (195, 146)], CYAN, dur=1.6, delay=0.6)
+    wire([(660, 94), (660, 106), (580, 106), (580, 140), (562, 140)], MAGENTA, dur=1.8, delay=0.2)
+    wire([(280, 348), (280, 356), (585, 356), (585, 143), (600, 143)], GREEN, dur=2.0, delay=0.9)
+    wire([(320, 348), (320, 363), (591, 363), (591, 205), (600, 205)], RED, dur=2.0, delay=1.3)
+    wire([(562, 300), (575, 300), (575, 267), (600, 267)], AMBER, dash=True, dur=1.4, delay=0.4)
+    wire([(562, 330), (578, 330), (578, 337), (600, 337)], BLUE, dash=True, dur=1.2, delay=0.8)
+    wire([(372, 216), (354, 216)], AMBER, dur=0.8, delay=0.2)
+    wire([(440, 240), (440, 248), (363, 248), (363, 380), (147, 380), (147, 392)], AMBER, dash=True, dur=2.0, delay=0.5)
+
+    legend = [("── ", "c"), ("request  ", "d"), ("── ", "m"), ("stripe webhook  ", "d"), ("┄┄ ", "y"), ("async / queue  ", "d"),
+              ("● ", "g"), ("packets animate the paths", "d")]
+    body.append(text(PAD, 472, legend, "xs", delay=t0 + 1.6))
+    return doc(h, "".join(body) + tmux_bar(h, 2, now), title="shoplux architecture")
+
+
 def site_days(rows: list[dict], now: dt.datetime) -> list[float | None]:
     """Per-day uptime ratio for the last HISTORY_DAYS days (oldest -> newest)."""
     today = now.date()
@@ -726,7 +817,7 @@ def panel_systemctl(ctx) -> str:
     body.append(text(PAD, y + 4, [("-- ", "d"), ("probed from a GitHub Actions runner at ", ""), (f"{now:%Y-%m-%d %H:%M} {now.tzname()}", "l"),
                                   (f" · next probe ~{nxt:%H:%M} · history {len(next(iter(hist.values()), []))} checks", ""), (" --", "d")],
                      "xs", delay=t0 + 1.2))
-    return doc(h, "".join(body) + tmux_bar(h, 2, now), title="systemctl status of production sites")
+    return doc(h, "".join(body) + tmux_bar(h, 3, now), title="systemctl status of production sites")
 
 
 def panel_htop(ctx) -> str:
@@ -860,7 +951,7 @@ def panel_htop(ctx) -> str:
         fx += len(n) * 7.2 + len(k) * 7.0 + 20
     body.append(f'<g class="a" style="animation-delay:{t0 + 1.4:.2f}s">{"".join(fk)}</g>')
     h = int(fy + 14 + 26)
-    return doc(h, "".join(body) + tmux_bar(h, 3, now), title="htop of github activity")
+    return doc(h, "".join(body) + tmux_bar(h, 4, now), title="htop of github activity")
 
 
 def panel_chrono(ctx) -> str:
@@ -876,7 +967,7 @@ def panel_chrono(ctx) -> str:
     t0 = end + 0.2
     if n < 20:
         body.append(text(PAD, 80, [("chronotype: not enough public commits to profile yet (", "y"), (str(n), "l"), (")", "y")]))
-        return doc(160, "".join(body) + tmux_bar(160, 4, now), title="commit chronotype")
+        return doc(160, "".join(body) + tmux_bar(160, 5, now), title="commit chronotype")
 
     cx0, cy0, ch = PAD + 34, 84, 140
     mx = max(hours.values())
@@ -939,7 +1030,7 @@ def panel_chrono(ctx) -> str:
     for i, segs in enumerate(diag):
         body.append(text(PAD, yy + i * LH, segs, "sm", delay=t0 + 1.1 + i * 0.15))
     h = int(yy + 2 * LH + 40)
-    return doc(h, "".join(body) + tmux_bar(h, 4, now), title="commit chronotype")
+    return doc(h, "".join(body) + tmux_bar(h, 5, now), title="commit chronotype")
 
 
 def panel_pulse(ctx) -> str:
@@ -992,7 +1083,7 @@ def panel_pulse(ctx) -> str:
     stats = [("total ", "d"), (f"{sum(vals)}", "l b"), ("   current streak ", "d"), (f"{cur}d", "g b"), ("   best streak ", "d"), (f"{best}d", "l b"),
              ("   spike ", "d"), (f"{vals[imax]} on {cal[imax][0]}", "y b"), ("   flatline days ", "d"), (f"{sum(1 for v in vals if v == 0)}", "r")]
     body.append(text(PAD, sy, stats, "sm", delay=t0 + 2.5))
-    return doc(h, "".join(body) + tmux_bar(h, 5, now), title="contribution oscilloscope")
+    return doc(h, "".join(body) + tmux_bar(h, 6, now), title="contribution oscilloscope")
 
 
 def panel_matrix(ctx) -> str:
@@ -1063,7 +1154,7 @@ def main() -> int:
     ctx = {"gh": gh, "commit_times": times, "weather": weather, "probes": probes, "history": history,
            "now": now, "streak": streaks(gh["calendar"])}
     panels = {
-        "boot.svg": panel_boot, "neofetch.svg": panel_neofetch, "systemctl.svg": panel_systemctl,
+        "boot.svg": panel_boot, "neofetch.svg": panel_neofetch, "shoplux.svg": panel_shoplux, "systemctl.svg": panel_systemctl,
         "htop.svg": panel_htop, "chrono.svg": panel_chrono, "pulse.svg": panel_pulse, "matrix.svg": panel_matrix,
     }
     for fn, f in panels.items():
