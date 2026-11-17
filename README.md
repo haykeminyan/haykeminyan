@@ -54,17 +54,17 @@
 **[`/srv/shoplux`](https://shoplux.casa)**<br/>
 <sub>`drwxr-x--- hayk prod`</sub>
 
-Solo-architected async e-commerce platform. Still shipping.
+Solo-architected async e-commerce platform with stripe transactions and ai-agents.
 
 `FastAPI` `SQLAlchemy2` `asyncpg` `PostgreSQL` `Redis` `Celery` `Grafana` `Docker` `SQLAdmin`
 
 </td>
 <td width="33%" valign="top">
 
-**[`/srv/travelculturehub`](https://travelculturehub.com)**<br/>
+**[`/srv/exibitions`](https://exibitions.baregorc.com)**<br/>
 <sub>`drwxr-x--- hayk prod` · [`src`](https://github.com/haykeminyan/culture_aggregator)</sub>
 
-Cultural content aggregator. REST + GraphQL, NLP/scraping ingestion pipelines, 8 hand-built pages, zero JS framework.
+Exhibitions aggregator. REST, NLP/scraping ingestion pipelines, 8 hand-built pages, zero JS framework.
 
 `FastAPI` `PostgreSQL` `aiohttp` `BeautifulSoup4`
 
@@ -76,7 +76,14 @@ Cultural content aggregator. REST + GraphQL, NLP/scraping ingestion pipelines, 8
 
 NGO directory platform. Shares a backend with TravelCultureHub, plus a custom editorial admin for non-technical staff.
 
-`Django 6` `PostgreSQL` `Docker` `Nginx`
+<td width="33%" valign="top">
+
+**[`/srv/history`](https://history.baregorc.com)**<br/>
+<sub>`drwxr-x--- hayk prod`</sub>
+
+A historical project about Armenia built with Angular, covering Armenian history from ancient times to the present day.
+
+`Angular` `ClaudeCode` `Nginx`
 
 </td>
 </tr>
@@ -110,6 +117,15 @@ apis       = ["rest", "graphql", "openapi"]
 
 [data]
 databases = ["postgresql", "redis", "mongodb", "mysql"]
+
+[ai]
+databases = ["pydantic-ai", "pydantic-eval", "logfire"]
+
+[payments]
+transactions = ["stripe"]
+
+[queue]
+frameworks = ["rabbimq"]
 
 [infra]
 cloud         = ["kubernetes", "gcp", "azure", "digitalocean"]

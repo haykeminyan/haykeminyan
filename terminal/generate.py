@@ -38,8 +38,9 @@ TZ = ZoneInfo("Europe/Lisbon")
 PORTO = (41.1496, -8.6110)
 SITES = [
     ("shoplux", "https://shoplux.casa", "async e-commerce platform"),
-    ("travelculturehub", "https://travelculturehub.com", "cultural content aggregator"),
+    ("exhibitions", "https://exhibitions.baregorc.com", "exhibitions aggregator"),
     ("baregorc", "https://baregorc.com", "NGO directory platform"),
+    ("history of Armenia", "https://history.baregorc.com", "historical project about Armenia"),
 ]
 HISTORY_DAYS = 30
 UA = "Mozilla/5.0 (compatible; hayk-terminal-profile/1.0; +https://github.com/haykeminyan)"
