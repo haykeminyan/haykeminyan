@@ -1,0 +1,60 @@
+name: terminal
+
+# Renders the terminal-style profile panels (terminal/generate.py) and
+# force-pushes them to the orphan `terminal` branch, so main's history stays
+# clean. The uptime history for the systemctl panel lives on that branch too.
+
+on:
+  schedule:
+    - cron: "17 * * * *"      # hourly: refresh stats + probe production sites
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "terminal/**"
+      - ".github/workflows/terminal.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: terminal
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: restore uptime history from the terminal branch
+        run: |
+          mkdir -p out/data
+          if git fetch --depth=1 origin terminal 2>/dev/null; then
+            git show FETCH_HEAD:data/uptime.json > out/data/uptime.json 2>/dev/null || echo '{}' > out/data/uptime.json
+          else
+            echo '{}' > out/data/uptime.json
+          fi
+
+      - name: render panels
+        env:
+          # METRICS_TOKEN (PAT) unlocks private-contribution counts; GITHUB_TOKEN works as a fallback.
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python terminal/generate.py --out out
+
+      - name: publish to the terminal branch
+        working-directory: out
+        run: |
+          git init -q -b terminal
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "render $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git push -qf "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" terminal
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
